@@ -1,29 +1,28 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import NavBarH from "./NavBarH";
-import NavBarV from "./NavBarV";
-import Dashboard from "./Dashboard"
 
-function UserPage() {
-    const {id} = useParams();
+function DailyActivity(props) {
+    let userID = props.id;
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3001/user/"+id)
+        fetch("http://localhost:3001/user/"+userID+"/activity")
             .then(res => res.json())
             .then(
                 (data) => {
                     setIsLoaded(true);
-                    setData(data.data);
+                    setData(data.data.sessions);
                 },
                 (error) => {
                     setIsLoaded(true);
                     setError(error);
                 }
             )
-    }, [id])
+    }, [userID])
+
+    console.log("Data activity : ");
+    console.log(data);
 
     if (error) {
         return <div>Erreur : {error.message}</div>;
@@ -32,14 +31,14 @@ function UserPage() {
     } else {
         return (
             <div className="w-100">
-                <NavBarH />
-                <section className="user-page-container d-flex h-100">
-                    <NavBarV />
-                    <Dashboard userID={data.id} {...data.userInfos} userScore={data.todayScore} {...data.keyData}/>
-                </section>
+                Daily Activity Placeholder check logs
+                {data.map( (session, index) => (
+                    <div key={index}>
+                        <span>{session.calories} {session.kilogram} {session.day}</span>
+                    </div>
+                ))}
             </div>
         )
     }
 }
-
-export default UserPage
+export default DailyActivity;

@@ -1,17 +1,13 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import NavBarH from "./NavBarH";
-import NavBarV from "./NavBarV";
-import Dashboard from "./Dashboard"
 
-function UserPage() {
-    const {id} = useParams();
+function SessionIntensity(props) {
+    let userID = props.id;
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3001/user/"+id)
+        fetch("http://localhost:3001/user/"+userID+"/performance")
             .then(res => res.json())
             .then(
                 (data) => {
@@ -23,7 +19,10 @@ function UserPage() {
                     setError(error);
                 }
             )
-    }, [id])
+    }, [userID])
+
+    console.log("Data perfs : ");
+    console.log(data);
 
     if (error) {
         return <div>Erreur : {error.message}</div>;
@@ -32,14 +31,14 @@ function UserPage() {
     } else {
         return (
             <div className="w-100">
-                <NavBarH />
-                <section className="user-page-container d-flex h-100">
-                    <NavBarV />
-                    <Dashboard userID={data.id} {...data.userInfos} userScore={data.todayScore} {...data.keyData}/>
-                </section>
+                Activity Intensity check logs
+                {data.data.map( (rating, index) => (
+                    <div key={index}>
+                        <span>{rating.value} {data.kind[rating.kind]}</span>
+                    </div>
+                ))}
             </div>
         )
     }
 }
-
-export default UserPage
+export default SessionIntensity;

@@ -12,23 +12,25 @@
     }
 
     &-h{
-        display: flex;
         align-items: center;
         background: black;
 
         &-link {
             color: white;
-            margin-left: 50px;
+            font-family: $regular-font;
+            font-size: 24px;
         }
     }
 
     &-v {
         height: 100%;
+        width: 120px;
         background-color: black;
 
         &-navigation {
             display: flex;
             flex-direction: column;
+            align-items: center;
         }
     }
 }

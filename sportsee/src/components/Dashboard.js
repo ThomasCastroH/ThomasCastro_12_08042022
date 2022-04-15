@@ -1,29 +1,43 @@
 import PropTypes from 'prop-types';
+import LipidsEaten from './LipidsEaten';
+import BurntCalories from './BurntCalories';
+import ProteinEaten from './ProteinEaten';
+import CarbsEaten from './CarbsEaten';
+import DailyActivity from './DailyActivity';
+import GoalCompletion from './GoalCompletion';
+import SessionIntensity from './SessionIntensity';
 
 function Dashboard(props) {
 
     const userID = props.userID;
     const userFirstname = props.firstName;
-    const userLastname = props.lastName;
-    const userAge = props.age;
-    const userScore = props.score;
+    const userScore = props.userScore;
     const calorieCount = props.calorieCount;
     const carbohydrateCount = props.carbohydrateCount;
     const lipidCount = props.lipidCount;
     const proteinCount = props.proteinCount;
 
     return (
-        <div className="dashboard-container">
+        <div className="dashboard-container w-100">
             <span className="dashboard-container-greetings">Bonjour {userFirstname}</span>
             <span className="dashboard-container-msg">Félicitation ! Vous avez explosé vos objectifs hier</span>
-            {/* <DailyActivity />
-            <SessionAverageDuration />
-            <SessionIntensity />
-            <GoalCompletion />
-            <BurntCalories />
-            <ProteinEaten />
-            <CarbsEaten />
-            <LipidsEaten /> */}
+            <section className="dashboard-container-content w-100 row">
+                <div className="dashboard-container-content-left col-10">
+                    <DailyActivity id={userID}/>
+                    <GoalCompletion score={userScore}/>
+                    <SessionIntensity id={userID}/>
+                </div>
+                <div className="dashboard-container-content-right">
+                    <BurntCalories calories={calorieCount} />
+                    <ProteinEaten proteins={proteinCount} />
+                    <CarbsEaten carbs={carbohydrateCount} />
+                    <LipidsEaten lipids={lipidCount} />
+                </div>
+                {/* 
+                <SessionAverageDuration />
+                 */}
+                
+            </section>
         </div>
     )
 }
