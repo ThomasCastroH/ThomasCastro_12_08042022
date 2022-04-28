@@ -6,6 +6,7 @@ import CarbsEaten from './CarbsEaten';
 import DailyActivity from './DailyActivity';
 import GoalCompletion from './GoalCompletion';
 import SessionIntensity from './SessionIntensity';
+import AverageSessionDuration from './AverageSessionDuration';
 
 function Dashboard(props) {
 
@@ -16,6 +17,8 @@ function Dashboard(props) {
     const carbohydrateCount = props.carbohydrateCount;
     const lipidCount = props.lipidCount;
     const proteinCount = props.proteinCount;
+console.log("score");
+console.log(userScore);
 
     return (
         <div className="dashboard-container w-100">
@@ -24,8 +27,11 @@ function Dashboard(props) {
             <section className="dashboard-container-content w-100 row">
                 <div className="dashboard-container-content-left col-10">
                     <DailyActivity id={userID}/>
-                    <GoalCompletion score={userScore}/>
-                    <SessionIntensity id={userID}/>
+                    <div className="dashboard-container-content-left-substats row">
+                        <AverageSessionDuration id={userID} />
+                        <SessionIntensity id={userID}/>
+                        <GoalCompletion score={userScore}/>
+                    </div>
                 </div>
                 <div className="dashboard-container-content-right">
                     <BurntCalories calories={calorieCount} />
@@ -34,7 +40,7 @@ function Dashboard(props) {
                     <LipidsEaten lipids={lipidCount} />
                 </div>
                 {/* 
-                <SessionAverageDuration />
+                
                  */}
                 
             </section>

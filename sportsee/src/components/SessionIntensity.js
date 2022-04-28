@@ -1,4 +1,11 @@
 import { useEffect, useState } from "react";
+import {
+    Radar,
+    RadarChart,
+    PolarGrid,
+    PolarAngleAxis,
+    PolarRadiusAxis
+  } from "recharts";
 
 function SessionIntensity(props) {
     let userID = props.id;
@@ -19,7 +26,7 @@ function SessionIntensity(props) {
                     setError(error);
                 }
             )
-    }, [userID])
+    }, []);
 
     console.log("Data perfs : ");
     console.log(data);
@@ -30,15 +37,20 @@ function SessionIntensity(props) {
         return <div>Chargement...</div>;
     } else {
         return (
-            <div className="w-100">
-                Activity Intensity check logs
-                {data.data.map( (rating, index) => (
-                    <div key={index}>
-                        <span>{rating.value} {data.kind[rating.kind]}</span>
-                    </div>
-                ))}
+            <div className="radar-chart col-4">
+                <RadarChart outerRadius={90} width={250} height={250} data={data.data}>
+                    <PolarGrid />
+                    <PolarAngleAxis dataKey={data.kind[data.data.kind]} />
+                    <Radar 
+                        name="Intensité" 
+                        dataKey="value"
+                        stroke="#FF0101B2" 
+                        fill="#FF0101B2"
+                        fillOpacity={0.8} />
+                </RadarChart>
             </div>
         )
     }
 }
+
 export default SessionIntensity;

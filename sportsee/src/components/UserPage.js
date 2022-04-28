@@ -23,7 +23,7 @@ function UserPage() {
                     setError(error);
                 }
             )
-    }, [id])
+    }, [])
 
     if (error) {
         return <div>Erreur : {error.message}</div>;
@@ -31,7 +31,7 @@ function UserPage() {
         return <div>Chargement...</div>;
     } else {
         return (
-            <div className="w-100">
+            <div className="main-content w-100">
                 <NavBarH />
                 <section className="user-page-container d-flex h-100">
                     <NavBarV />

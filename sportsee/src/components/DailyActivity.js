@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+
 
 function DailyActivity(props) {
     let userID = props.id;
@@ -22,7 +24,7 @@ function DailyActivity(props) {
     }, [userID])
 
     console.log("Data activity : ");
-    console.log(data);
+    console.log(data); 
 
     if (error) {
         return <div>Erreur : {error.message}</div>;
@@ -31,12 +33,26 @@ function DailyActivity(props) {
     } else {
         return (
             <div className="w-100">
-                Daily Activity Placeholder check logs
-                {data.map( (session, index) => (
-                    <div key={index}>
-                        <span>{session.calories} {session.kilogram} {session.day}</span>
-                    </div>
-                ))}
+                <ResponsiveContainer width="100%" height={400}>
+                    <BarChart
+                        data={data}
+                        margin={{
+                            top: 5,
+                            right: 30,
+                            left: 20,
+                            bottom: 5,
+                        }}
+                        barSize={10}
+                        >
+                        <CartesianGrid strokeDasharray="0 4" />
+                        <XAxis />
+                        <YAxis />
+                        <Tooltip />
+                        <Legend />
+                        <Bar dataKey="kilogram" unit="kg" fill="#020203" />
+                        <Bar dataKey="calories" unit="kcal" fill="#FF0000" />
+                    </BarChart>
+                </ResponsiveContainer>
             </div>
         )
     }
