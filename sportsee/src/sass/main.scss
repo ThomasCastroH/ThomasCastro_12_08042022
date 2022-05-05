@@ -1,7 +1,13 @@
 @import "./utils/variables";
 @import "./components-style/navbar";
+@import "./components-style/sessionIntensity";
+@import "./components-style/sessionDuration";
+@import "./components-style/goalCompletion";
+@import "./components-style/dailyActivity";
+@import "./components-style/nutrients";
+
 @import "./pages/home";
 
-* {
-    border: 1px solid red;
-}
+// * {
+//     border: 1px solid red;
+// }

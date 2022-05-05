@@ -1,0 +1,40 @@
+.pie-chart {
+    position: relative;
+    max-width: 250px;
+    max-height: 250px;    
+}
+
+.pie-chart > .recharts-wrapper {
+    background: #FBFBFB;
+    border-radius: 5px;
+}
+
+.pie-chart-legend {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+.pie-chart-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    border-radius: 5px;
+    flex-direction: column;
+}
+
+.pie-chart-score {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.pie-chart-desc {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 100;
+}

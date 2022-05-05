@@ -1,5 +1,7 @@
-.main-content {
+html, body {
     height: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 .data-img {
@@ -12,4 +14,36 @@
 
 .row {
     margin: 0;
+}
+
+.main-content {
+    overflow: hidden;
+}
+
+.dashboard-container {
+    font-family: $regular-font;
+    font-weight: 500;
+    
+    &-greetings {
+        font-size: 38px;
+
+    }
+
+    &-name {
+        color: $secondary-color;
+    }
+
+    &-content {
+        &-left {
+            &-substats {
+                display: flex;
+                justify-content: space-around;
+
+                @media (max-width: 1270px) {
+                    justify-content: space-between;
+
+                }
+            }
+        }
+    }
 }

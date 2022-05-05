@@ -1,0 +1,38 @@
+.line-chart {
+    position: relative;
+    max-width: 250px;
+    max-height: 250px;
+}
+
+.line-chart > .recharts-wrapper {
+    background: red;
+    border-radius: 5px;
+}
+
+.recharts-cartesian-grid-horizontal > line,
+.recharts-cartesian-grid-vertical > line {
+    stroke: transparent;
+}
+
+.recharts-cartesian-axis-line {
+    stroke: transparent;
+}
+
+.line-chart > .recharts-wrapper > .recharts-surface > .recharts-layer > .recharts-cartesian-axis-ticks > .recharts-cartesian-axis-tick > text {
+    fill: white;
+    stroke: transparent;
+}
+
+.line-chart > .recharts-wrapper > .recharts-surface > .recharts-layer > .recharts-cartesian-axis-ticks > .recharts-cartesian-axis-tick > text > tspan {
+    font-size: 12px;
+}
+
+
+.line-chart > .recharts-wrapper > .recharts-surface > .recharts-layer > .recharts-cartesian-axis-ticks > .recharts-cartesian-axis-tick > line {
+    stroke: transparent;
+}
+
+.line-chart-legend {
+    color: white;
+    font-weight: 400;
+}

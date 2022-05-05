@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useEffect, useState } from "react";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
@@ -21,10 +22,7 @@ function DailyActivity(props) {
                     setError(error);
                 }
             )
-    }, [userID])
-
-    console.log("Data activity : ");
-    console.log(data); 
+    }, [])
 
     if (error) {
         return <div>Erreur : {error.message}</div>;
@@ -32,8 +30,8 @@ function DailyActivity(props) {
         return <div>Chargement...</div>;
     } else {
         return (
-            <div className="w-100">
-                <ResponsiveContainer width="100%" height={400}>
+            <div className="dashboard-container-content-left w-100 mb-4">
+                <ResponsiveContainer width={'99%'} height={350}>
                     <BarChart
                         data={data}
                         margin={{
@@ -44,17 +42,22 @@ function DailyActivity(props) {
                         }}
                         barSize={10}
                         >
-                        <CartesianGrid strokeDasharray="0 4" />
+                        <CartesianGrid strokeDasharray="0 4"/>
                         <XAxis />
-                        <YAxis />
+                        <YAxis orientation="right"/>
                         <Tooltip />
-                        <Legend />
-                        <Bar dataKey="kilogram" unit="kg" fill="#020203" />
-                        <Bar dataKey="calories" unit="kcal" fill="#FF0000" />
+                        <Legend align="right" verticalAlign="top" iconType="circle"/>
+                        <Bar dataKey="kilogram" unit="kg" fill="#020203" name="Poids (kg)" radius={10}/>
+                        <Bar dataKey="calories" unit="kcal" fill="#FF0000" name="Calories brûlées (kCal)" radius={10}/>
                     </BarChart>
                 </ResponsiveContainer>
             </div>
         )
     }
 }
+
+DailyActivity.propTypes = {
+    id: PropTypes.number
+}
+
 export default DailyActivity;

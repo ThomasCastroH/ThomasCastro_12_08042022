@@ -1,10 +1,11 @@
+import PropTypes from 'prop-types';
 import img from '../assets/images/carbs-icon.png';
 
 function CarbsEaten (props) {
     let carbs = props.carbs;
 
     return (
-        <div className="carbs-eaten-container row mb-4">
+        <div className="carbs-eaten-container nutirent-info row mb-4 rounded">
             <img className="carbs-eaten-container-img img-rounded data-img" src={img} alt="carbs"/>
             <div className="carbs-eaten-title d-flex flex-column">
                 <span className="carbs-eaten-title-text">{carbs}g</span>
@@ -13,6 +14,10 @@ function CarbsEaten (props) {
         </div>
     )
 
+}
+
+CarbsEaten.propTypes = {
+    carbs: PropTypes.number
 }
 
 export default CarbsEaten

@@ -1,0 +1,28 @@
+.radar-chart {
+    position: relative;
+    max-width: 250px;
+    max-height: 250px;
+
+}
+
+.radar-chart > .recharts-wrapper {
+    background: #282D30;
+    border-radius: 5px;
+}
+
+.recharts-polar-grid-concentric-polygon {
+    stroke: white;
+}
+
+.recharts-polar-grid-angle > line {
+    stroke: transparent;
+}
+
+.radar-chart > .recharts-wrapper > .recharts-surface > .recharts-layer > .recharts-polar-angle-axis-ticks > .recharts-polar-angle-axis-tick > line {
+    stroke: transparent;
+}
+
+.radar-chart > .recharts-wrapper > .recharts-surface > .recharts-layer > .recharts-polar-angle-axis-ticks > .recharts-polar-angle-axis-tick > text > tspan {
+    font-size: 12px;
+    font-weight: 100;
+}

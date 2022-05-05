@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 function NavBarV () {
     return (
-        <div className="navbar-v mh-100 d-flex flex-column">
+        <div className="navbar-v d-flex flex-column">
             <nav className="nav navbar-v-navigation d-flex flex-column">
                 <Link to="/" className="navbar-v-link"><img className='navbar-icon' src={require('../assets/images/icon-medit.png')} alt='meditation icon'/></Link>
                 <Link to="/" className="navbar-v-link"><img className='navbar-icon' src={require('../assets/images/icon-swim.png')} alt='swimming icon'/></Link>

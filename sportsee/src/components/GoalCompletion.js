@@ -1,34 +1,49 @@
-import { PieChart, Pie, Sector, Cell } from "recharts";
+import { PieChart, Pie, Cell } from "recharts";
+import PropTypes from 'prop-types';
 
 
 function GoalCompletion(props) {
     let score = props.score;
 
     let dataCompletion = [
-        { name: "Atteint", value: score*100 },
+        { name: "Score", value: score*100 },
         { name: "Objectif", value: 100 - score*100 }
+    ]
+
+    let data02 = [
+        { name: "Total", value: 100 },
     ]
     const COLORS = ["red", "transparent"];
 
     return (
-        <div className="goal-completion-container col-4">
+        <div className="pie-chart">
             <PieChart width={250} height={250}>
                 <Pie
                     data={dataCompletion}
-                    cx={125}
+                    cx={120}
                     cy={125}
                     startAngle={90}
+                    endAngle={450}
                     innerRadius={70}
                     outerRadius={80}
+                    stroke="transparent"
                     fill="#8884d8"
-                    paddingAngle={5}
                     dataKey="value"
                 >
                     {dataCompletion.map((entry, index) => (
                         <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                     ))}
                 </Pie>
+                <Pie
+                    data={data02}
+                    dataKey="value"
+                    cx={120}
+                    cy={125}
+                    outerRadius={70}
+                    fill="white"
+                />
             </PieChart>
+            <span className="pie-chart-legend">Score</span>
             <div className="pie-chart-text">
                 <span className="pie-chart-score">{score*100}%</span>
                 <span className="pie-chart-desc">de votre objectif atteint</span>
@@ -36,6 +51,10 @@ function GoalCompletion(props) {
 
         </div>
     )
+}
+
+GoalCompletion.propTypes = {
+    score: PropTypes.number
 }
 
 export default GoalCompletion;

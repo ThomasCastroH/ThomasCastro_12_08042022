@@ -1,0 +1,9 @@
+.recharts-responsive-container > .recharts-wrapper
+ > .recharts-surface > .recharts-yAxis > .recharts-cartesian-axis-ticks
+ > .recharts-cartesian-axis-tick > line {
+    stroke: transparent;
+}
+
+.recharts-responsive-container {
+    background: #FBFBFB;
+}
