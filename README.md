@@ -2,13 +2,19 @@
 
 This project was created with [Create React App](https://github.com/facebook/create-react-app).
 
-# How to start
+## Clone the project to your repository
 
-### yarn dev
+```
+$ git clone https://github.com/ThomasCastroH/ThomasCastro_12_08042022
+```
+
+## How to start
+
+### `yarn dev`
 
 Go to /backend folder and run `yarn dev`
 
-### yarn start
+### `yarn start`
 
 Go back to /sportsee folder and run `yarn start`
 
