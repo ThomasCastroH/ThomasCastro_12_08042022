@@ -8,6 +8,12 @@ import GoalCompletion from './GoalCompletion';
 import SessionIntensity from './SessionIntensity';
 import AverageSessionDuration from './AverageSessionDuration';
 
+/**
+ * Get information about the user from de props to display on the dashboard
+ * @param {*} props 
+ * @returns 
+ */
+
 function Dashboard(props) {
 
     const userID = props.userID;

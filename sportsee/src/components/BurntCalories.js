@@ -2,6 +2,11 @@ import PropTypes from 'prop-types';
 
 import img from '../assets/images/calories-icon.png';
 
+/**
+ * Display the calories burnt by the user
+ * @param {number} props - calories burnt
+ */
+
 function BurntCalories (props) {
     let calories = props.calories;
 

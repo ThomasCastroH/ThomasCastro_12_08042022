@@ -1,6 +1,11 @@
 import img from '../assets/images/protein-icon.png';
 import PropTypes from 'prop-types';
 
+/**
+ * Display the protein eaten by the user
+ * @param {number} props 
+ * @returns 
+ */
 
 function ProteinEaten (props) {
     let proteins = props.proteins;

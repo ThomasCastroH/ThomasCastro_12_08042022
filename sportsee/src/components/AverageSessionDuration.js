@@ -9,6 +9,10 @@ import {
     Legend
   } from "recharts";
 
+/**
+ * Get the user id from the prop to request informations about the duration of each session of the user and display them in a line chart
+ * @param {number} props - ID of the user
+ */  
 
 function AverageSessionDuration(props) {
     let userID = props.id;

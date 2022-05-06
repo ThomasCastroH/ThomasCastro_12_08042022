@@ -1,6 +1,11 @@
 import img from '../assets/images/fat-icon.png';
 import PropTypes from 'prop-types';
 
+/**
+ * Display the lipids eaten by the user
+ * @param {number} props 
+ * @returns 
+ */
 
 function LipidsEaten (props) {
     let lipids = props.lipids;

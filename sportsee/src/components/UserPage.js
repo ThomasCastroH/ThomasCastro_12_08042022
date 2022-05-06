@@ -4,6 +4,10 @@ import NavBarH from "./NavBarH";
 import NavBarV from "./NavBarV";
 import Dashboard from "./Dashboard"
 
+/**
+ * Get the user's id from the url to call the data from the server and construct the dashboard
+ */
+
 function UserPage() {
     const {id} = useParams();
     const [error, setError] = useState(null);

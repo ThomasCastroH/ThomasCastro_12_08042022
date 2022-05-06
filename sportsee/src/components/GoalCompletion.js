@@ -2,6 +2,12 @@ import { PieChart, Pie, Cell } from "recharts";
 import PropTypes from 'prop-types';
 
 
+/**
+ * Get the %age of the user's goal completion and display it in a pie chart
+ * @param {number} props 
+ * @returns 
+ */
+
 function GoalCompletion(props) {
     let score = props.score;
 

@@ -1,6 +1,12 @@
 import PropTypes from 'prop-types';
 import img from '../assets/images/carbs-icon.png';
 
+/**
+ * Display the carbs eaten by the user
+ * @param {number} props - carbs eaten
+ * @returns 
+ */
+
 function CarbsEaten (props) {
     let carbs = props.carbs;
 

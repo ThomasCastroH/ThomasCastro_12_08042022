@@ -7,6 +7,11 @@ import {
   } from "recharts";
 import PropTypes from 'prop-types';
 
+/**
+ * Get the user id from the prop to request informations about the intensity of each category of the user and display them in a radar chart
+ * @param {number} props 
+ */
+
 function SessionIntensity(props) {
     let userID = props.id;
     const [error, setError] = useState(null);

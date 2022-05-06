@@ -3,6 +3,12 @@ import { useEffect, useState } from "react";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 
+/**
+ * Get the user id from the prop to request informations about the activity of the user and display them in a bar chart
+ * @param {number} props - ID of the user
+ * @returns 
+ */
+
 function DailyActivity(props) {
     let userID = props.id;
     const [error, setError] = useState(null);
@@ -31,7 +37,7 @@ function DailyActivity(props) {
     } else {
         return (
             <div className="dashboard-container-content-left w-100 mb-4">
-                <ResponsiveContainer width={'99%'} height={350}>
+                <ResponsiveContainer height={350}>
                     <BarChart
                         data={data}
                         margin={{

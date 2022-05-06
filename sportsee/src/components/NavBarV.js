@@ -1,5 +1,9 @@
 import { Link } from 'react-router-dom'
 
+/**
+ * Display the vertical navbar
+ */
+
 function NavBarV () {
     return (
         <div className="navbar-v d-flex flex-column">

@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom'
 import logo from '../assets/images/logo.png';
 
+/**
+ * Display the horizontal navbar
+ */
+
 function NavBarH() {
     return (
         <div className="navbar-container w-100">
