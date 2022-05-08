@@ -18,4 +18,5 @@ Go to /backend folder and run `yarn dev`
 
 Go back to /sportsee folder and run `yarn start`
 
-Open http://localhost:3000 to view it in your browser.
+Open http://localhost:3000/user/ followed by the id of the user to view it in your browser.
+There is only two users for the moment, '/user/12' and '/user/18'.
