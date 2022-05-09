@@ -10,17 +10,17 @@ Thomas CASTRO
 
 This project was created with [Create React App](https://github.com/facebook/create-react-app).
 
-    * [React](https://reactjs.org/)
-    * [Javascript](https://www.javascript.com/)
-    * [Sass](https://sass-lang.com/)
-    * [Recharts](https://recharts.org/)
+* [React](https://reactjs.org/)
+* [Javascript](https://www.javascript.com/)
+* [Sass](https://sass-lang.com/)
+* [Recharts](https://recharts.org/)
 
 ## Get started
 
 ### Prerequisites
 
-    *[NodeJS](https://nodejs.org/en/) v16.13.0
-    *[Yarn](https://yarnpkg.com/) v1.22.18
+*[NodeJS](https://nodejs.org/en/) v16.13.0
+*[Yarn](https://yarnpkg.com/) v1.22.18
 
 ### Clone the project to your repository
 
