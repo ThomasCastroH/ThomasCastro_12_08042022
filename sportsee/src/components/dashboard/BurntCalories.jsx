@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-import img from '../assets/images/calories-icon.png';
+import img from '../../assets/images/calories-icon.png';
 
 /**
  * Display the calories burnt by the user
@@ -8,7 +8,7 @@ import img from '../assets/images/calories-icon.png';
  */
 
 function BurntCalories (props) {
-    let calories = props.calories;
+    let calories = props.keyData;
 
     return (
         <div className="burnt-calories-container nutirent-info row mb-4 rounded">

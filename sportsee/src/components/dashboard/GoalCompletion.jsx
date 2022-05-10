@@ -12,8 +12,8 @@ function GoalCompletion(props) {
     let score = props.score;
 
     let dataCompletion = [
-        { name: "Score", value: score*100 },
-        { name: "Objectif", value: 100 - score*100 }
+        { name: "Score", value: score },
+        { name: "Objectif", value: 100 - score }
     ]
 
     let data02 = [
@@ -51,7 +51,7 @@ function GoalCompletion(props) {
             </PieChart>
             <span className="pie-chart-legend">Score</span>
             <div className="pie-chart-text">
-                <span className="pie-chart-score">{score*100}%</span>
+                <span className="pie-chart-score">{score}%</span>
                 <span className="pie-chart-desc">de votre objectif atteint</span>
             </div>
 

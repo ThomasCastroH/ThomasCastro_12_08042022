@@ -1,4 +1,4 @@
-import img from '../assets/images/fat-icon.png';
+import img from '../../assets/images/fat-icon.png';
 import PropTypes from 'prop-types';
 
 /**
@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
  */
 
 function LipidsEaten (props) {
-    let lipids = props.lipids;
+    let lipids = props.keyData;
 
     return (
         <div className="lipids-eaten-container nutirent-info row rounded">

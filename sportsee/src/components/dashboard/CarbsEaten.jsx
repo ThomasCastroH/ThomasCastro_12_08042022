@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import img from '../assets/images/carbs-icon.png';
+import img from '../../assets/images/carbs-icon.png';
 
 /**
  * Display the carbs eaten by the user
@@ -8,7 +8,7 @@ import img from '../assets/images/carbs-icon.png';
  */
 
 function CarbsEaten (props) {
-    let carbs = props.carbs;
+    let carbs = props.keyData;
 
     return (
         <div className="carbs-eaten-container nutirent-info row mb-4 rounded">

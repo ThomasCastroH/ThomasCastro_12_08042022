@@ -1,4 +1,4 @@
-import img from '../assets/images/protein-icon.png';
+import img from '../../assets/images/protein-icon.png';
 import PropTypes from 'prop-types';
 
 /**
@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
  */
 
 function ProteinEaten (props) {
-    let proteins = props.proteins;
+    let proteins = props.keyData;
 
     return (
         <div className="protein-eaten-container nutirent-info row mb-4 rounded">
