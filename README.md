@@ -41,7 +41,7 @@ Go back to /sportsee folder and run `yarn start`
 Open http://localhost:3000/ in your browser.
 You can now choose one of the two users available.
 
-#### Switch between mockup and real data
+#### Switch between mock and real data
 
 Go to the file 'src/service/getData.jsx' and change the variable useMockedData.
 Check comment to see what you need to change.

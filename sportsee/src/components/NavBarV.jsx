@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom'
 
 /**
- * Display the vertical navbar
+ * @description Display the vertical navbar
+ * @returns React component
  */
 
 function NavBarV () {

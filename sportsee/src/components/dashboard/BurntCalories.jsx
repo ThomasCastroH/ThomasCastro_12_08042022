@@ -14,7 +14,7 @@ function BurntCalories (props) {
         <div className="burnt-calories-container nutirent-info row mb-4 rounded">
             <img className="burnt-calories-container-img img-rounded data-img" src={img} alt="calories"/>
             <div className="burnt-calories-title d-flex flex-column">
-                <span className="burnt-calories-title-text">{calories}kcal</span>
+                <span className="burnt-calories-title-text">{calories} kcal</span>
                 <span className="burnt-calories-title-subtext">Calories</span>
             </div>
         </div>

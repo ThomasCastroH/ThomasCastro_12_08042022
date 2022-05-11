@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 
 /**
- * Get the %age of the user's goal completion and display it in a pie chart
+ * @description Display the goal completion of the user
  * @param {number} props 
- * @returns 
+ * @returns React component
  */
 
 function GoalCompletion(props) {

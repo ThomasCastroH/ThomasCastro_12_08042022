@@ -17,7 +17,7 @@ import {
 } from '../service/getData';
 
 /**
- * Get information about the user from the service to display the elements on the dashboard
+ * @description Get information about the user from the service to display the elements on the dashboard
  * @returns React component
  */
 function Dashboard() {
@@ -42,7 +42,7 @@ function Dashboard() {
                     <DailyActivity activity={activityData}/>
                     <div className="dashboard-container-content-left-substats">
                         <AverageSessionDuration session={sessionData}  />
-                        {/* <SessionIntensity performance={performance} /> */}
+                        <SessionIntensity performance={performance} />
                         <GoalCompletion score={score}/>
                     </div>
                 </div>

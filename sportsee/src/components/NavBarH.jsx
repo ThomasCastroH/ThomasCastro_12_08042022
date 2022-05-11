@@ -2,7 +2,8 @@ import { Link } from 'react-router-dom'
 import logo from '../assets/images/logo.png';
 
 /**
- * Display the horizontal navbar
+ * @description Display the horizontal navbar
+ * @returns React component
  */
 
 function NavBarH() {

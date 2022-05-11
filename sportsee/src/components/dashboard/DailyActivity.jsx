@@ -3,9 +3,9 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsive
 
 
 /**
- * Get the user id from the prop to request informations about the activity of the user and display them in a bar chart
+ * @description Display a bar chart with informations about the activity of the user (weight and calories burnt)
  * @param {narrayumber} props - ID of the user
- * @returns 
+ * @returns React component
  */
 
 function DailyActivity(props) {
@@ -25,8 +25,8 @@ function DailyActivity(props) {
                     barSize={10}
                     >
                     <CartesianGrid strokeDasharray="0 4"/>
-                    <XAxis />
-                    <YAxis orientation="right"/>
+                    <XAxis tickFormatter={(tick) => tick+1}/>
+                    <YAxis dataKey="calories" orientation="right"/>
                     <Tooltip />
                     <Legend align="right" verticalAlign="top" iconType="circle"/>
                     <Bar dataKey="kilogram" unit="kg" fill="#020203" name="Poids (kg)" radius={10}/>

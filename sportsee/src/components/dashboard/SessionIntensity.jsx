@@ -7,36 +7,36 @@ import {
 import PropTypes from 'prop-types';
 
 /**
- * Get the user id from the prop to request informations about the intensity of each category of the user and display them in a radar chart
+ * @description Display the intensity of each training of the user
  * @param {array} props 
+ * @returns React component
  */
 
 function SessionIntensity(props) {
     const performance = props.performance;
     const radarData = performance.data;
-    const radarCategories = performance.data.kind;
 
-    console.log(radarData, radarCategories, performance);
+    console.log(radarData);
 
     return (
         <div className="radar-chart">
             <RadarChart outerRadius={70} width={250} height={250} data={radarData} cx={120}>
                 <PolarGrid />
-                <PolarAngleAxis dataKey={radarCategories} stroke="white" tickFormatter={
+                <PolarAngleAxis dataKey="kind" stroke="white" tickFormatter={
                     (tick) => {
                         switch(tick) {
-                            case 0:
-                                return performance.kind['1'][0].toUpperCase()+performance.kind['1'].slice(1);
                             case 1:
-                                return performance.kind['2'][0].toUpperCase()+performance.kind['2'].slice(1);
+                                return "Cardio";
                             case 2:
-                                return performance.kind['3'][0].toUpperCase()+performance.kind['3'].slice(1);
+                                return "Energie";
                             case 3:
-                                return performance.kind['4'][0].toUpperCase()+performance.kind['4'].slice(1);
+                                return "Endurance";
                             case 4:
-                                return performance.kind['5'][0].toUpperCase()+performance.kind['5'].slice(1);
-                            case 5: 
-                                return performance.kind['6'][0].toUpperCase()+performance.kind['6'].slice(1);
+                                return "Force";
+                            case 5:
+                                return "Vitesse";
+                            case 6: 
+                                return "Intensité";
                             default:
                                 return "";
                         }

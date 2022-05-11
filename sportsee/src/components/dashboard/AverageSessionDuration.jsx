@@ -64,7 +64,7 @@ function AverageSessionDuration(props) {
                     type="basis" 
                     dataKey="sessionLength" 
                     stroke="white" 
-                    activeDot={{ r: 7 }} />
+                    dot={false} />
             </LineChart>
         </div>
     )
