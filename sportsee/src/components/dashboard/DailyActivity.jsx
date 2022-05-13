@@ -8,6 +8,19 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsive
  * @returns React component
  */
 
+const CustomBarTooltip = ({ active, payload }) => {
+    if (active && payload && payload.length) {
+        return (
+            <div className="custom-bar-tooltip">
+                <p className="custom-bar-tooltip-text">{payload[0].value}kg</p>
+                <p className="custom-bar-tooltip-text">{payload[1].value}Kcal</p>
+            </div>
+        );
+    }
+
+    return null;
+}
+
 function DailyActivity(props) {
     const data = props.activity;
     
@@ -27,7 +40,7 @@ function DailyActivity(props) {
                     <CartesianGrid strokeDasharray="0 4"/>
                     <XAxis tickFormatter={(tick) => tick+1}/>
                     <YAxis dataKey="calories" orientation="right"/>
-                    <Tooltip />
+                    <Tooltip content={<CustomBarTooltip />}/>
                     <Legend align="right" verticalAlign="top" iconType="circle"/>
                     <Bar dataKey="kilogram" unit="kg" fill="#020203" name="Poids (kg)" radius={10}/>
                     <Bar dataKey="calories" unit="kcal" fill="#FF0000" name="Calories brûlées (kCal)" radius={10}/>

@@ -7,3 +7,21 @@
 .recharts-responsive-container {
     background: #FBFBFB;
 }
+
+.custom-bar-tooltip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 70px;
+    height: 110px;
+    background: $secondary-color;
+
+    margin-left: 20px;
+    margin-bottom: 20px;
+
+    &-text {
+        color: white;
+        margin-top: 15px;
+    }
+}

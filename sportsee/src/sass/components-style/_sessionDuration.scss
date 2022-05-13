@@ -36,3 +36,12 @@
     color: white;
     font-weight: 400;
 }
+
+.custom-line-tooltip {
+    display: flex;
+    justify-content: center;
+    width: 60px;
+    height: 30px;
+    background-color: #fff;
+    border : 1px solid #000;
+}

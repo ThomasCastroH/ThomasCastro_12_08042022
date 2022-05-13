@@ -14,6 +14,18 @@ import {
  * @returns React component
  */  
 
+const CustomLineTooltip = ({ active, payload, label }) => {
+    if (active && payload && payload.length) {
+        return (
+            <div className="custom-line-tooltip">
+                <p className="custom-line-tooltip-value">{payload[0].value} min</p>
+            </div>
+        );
+    }
+
+    return null;
+}
+
 function AverageSessionDuration(props) {
     const session = props.session;
 
@@ -52,7 +64,7 @@ function AverageSessionDuration(props) {
                                 return "";
                     }
                 }} />
-                <Tooltip />
+                <Tooltip content={<CustomLineTooltip />}/>
                 <Legend align="left" verticalAlign="top" 
                     content={() =>
                         <div>
@@ -71,7 +83,10 @@ function AverageSessionDuration(props) {
 }
 
 AverageSessionDuration.propTypes = {
-    session: PropTypes.array
+    session: PropTypes.oneOfType([
+        PropTypes.array,
+        PropTypes.string
+    ])
 }
 
 export default AverageSessionDuration;

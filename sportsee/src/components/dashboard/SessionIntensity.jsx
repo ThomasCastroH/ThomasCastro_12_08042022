@@ -14,11 +14,10 @@ import PropTypes from 'prop-types';
 
 function SessionIntensity(props) {
     const performance = props.performance;
-    const radarData = performance.data;
-
+    
     return (
         <div className="radar-chart">
-            <RadarChart outerRadius={70} width={250} height={250} data={radarData} cx={120}>
+            <RadarChart outerRadius={70} width={250} height={250} data={performance.data} cx={120}>
                 <PolarGrid />
                 <PolarAngleAxis dataKey="kind" stroke="white" tickFormatter={
                     (tick) => {
