@@ -16,8 +16,6 @@ function SessionIntensity(props) {
     const performance = props.performance;
     const radarData = performance.data;
 
-    console.log(radarData);
-
     return (
         <div className="radar-chart">
             <RadarChart outerRadius={70} width={250} height={250} data={radarData} cx={120}>

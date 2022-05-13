@@ -1,49 +1,25 @@
-html, body {
-    height: 100%;
-    padding: 0;
-    margin: 0;
-}
-
-.data-img {
-    width: 60px;
-}
-
-.recharts-polar-angle-axis-tick-value {
-    font-size: 12px;
-}
-
-.row {
-    margin: 0;
-}
-
-.main-content {
-    overflow: hidden;
-}
-
-.dashboard-container {
-    font-family: $regular-font;
-    font-weight: 500;
-    
-    &-greetings {
-        font-size: 38px;
-
+.home {
+    &-logo{
+        width: 400px;
+        align-self: center;
+        margin-top: 100px;
     }
-
-    &-name {
-        color: $secondary-color;
+    &-title {
+        font-size: 2rem;
+        font-weight: 700;
+        align-self: center;
+        margin: 50px 0 50px 0;
     }
-
-    &-content {
-        &-left {
-            &-substats {
-                display: flex;
-                justify-content: space-around;
-
-                @media (max-width: 1270px) {
-                    justify-content: space-between;
-
-                }
-            }
+    &-users {
+        font-size: 2rem;
+        align-self: center;
+    }
+    &-user {
+        margin: 0 50px 0 50px;
+        text-decoration: underline;
+        color: $primary-color;
+        &:hover {
+            color: $secondary-color;
         }
     }
 }
