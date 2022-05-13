@@ -13,9 +13,9 @@ function NavBarH() {
                 <img className="navbar-brand mb-0 h1 navbar-logo" src={logo} alt="logo" />
                 <div className="navbar-nav navbar-h-navigation w-100 d-flex justify-content-around">
                     <Link to="/" className="nav-item navbar-h-link">Accueil</Link>
-                    <Link to="/" className="nav-item navbar-h-link">Profil</Link>
-                    <Link to="/" className="nav-item navbar-h-link">Réglage</Link>
-                    <Link to="/" className="nav-item navbar-h-link">Communauté</Link>
+                    <Link to="#" className="nav-item navbar-h-link">Profil</Link>
+                    <Link to="#" className="nav-item navbar-h-link">Réglage</Link>
+                    <Link to="#" className="nav-item navbar-h-link">Communauté</Link>
                 </div>
             </nav>
         </div>
