@@ -10,10 +10,12 @@ Thomas CASTRO
 
 This project was created with [Create React App](https://github.com/facebook/create-react-app).
 
-* [React](https://reactjs.org/)
+* [React](https://reactjs.org/) v18.0.0
+* [React Router](https://reacttraining.com/react-router/web/guides/quick-start) v6.0.0
 * [Javascript](https://www.javascript.com/)
-* [Sass](https://sass-lang.com/)
-* [Recharts](https://recharts.org/)
+* [Sass](https://sass-lang.com/) v1.50.0
+* [Bootstrap](https://getbootstrap.com/) v5.1.3
+* [Recharts](https://recharts.org/) v2.1.9
 
 ## Get started
 
