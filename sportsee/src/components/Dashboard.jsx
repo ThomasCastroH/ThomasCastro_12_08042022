@@ -52,10 +52,6 @@ function Dashboard() {
                     <CarbsEaten  keyData={keyData.carbohydrateCount} />
                     <LipidsEaten  keyData={keyData.lipidCount} />
                 </div>
-                {/* 
-                
-                 */}
-                
             </section>
         </div>
     )

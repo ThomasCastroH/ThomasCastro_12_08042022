@@ -19,12 +19,26 @@ export function GetUserName(id) {
     useEffect(() => {
         if (useMockedData) {
             fetch(`${urlMocked}user${userID}.json`)
-                .then(res => res.json())
-                .then((result) => setUserName(result.data.userInfos.firstName));
+                .then((res) => {
+                    if (res.status === 404) {
+                        window.location.href = "/error";
+                        return;
+                    } else {
+                        return res.json();
+                    }
+                })
+                .then((result) => setUserName(result.data.userInfos.firstName))
         } else {
             fetch(`${url}${userID}`)
-                .then(res => res.json())
-                .then((result) => setUserName(result.data.userInfos.firstName));
+                .then((res) => {
+                    if (res.status === 404) {
+                        window.location.href = "/error";
+                        return;
+                    } else {
+                        return res.json();
+                    }
+                })
+                .then((result) => setUserName(result.data.userInfos.firstName))
         }
     }, [userID]);
 

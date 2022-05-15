@@ -1,6 +1,7 @@
 import NavBarH from "../components/NavBarH";
 import NavBarV from "../components/NavBarV";
-import Dashboard from "../components/Dashboard"
+import Dashboard from "../components/Dashboard";
+import { useParams } from "react-router-dom";
 
 /**
  * Get the user's id from the url to call the data from the server and construct the dashboard
