@@ -19,14 +19,7 @@ export function GetUserName(id) {
     useEffect(() => {
         if (useMockedData) {
             fetch(`${urlMocked}user${userID}.json`)
-                .then((res) => {
-                    if (res.status === 404) {
-                        window.location.href = "/error";
-                        return;
-                    } else {
-                        return res.json();
-                    }
-                })
+                .then((res) => res.json())
                 .then((result) => setUserName(result.data.userInfos.firstName))
         } else {
             fetch(`${url}${userID}`)
@@ -57,14 +50,7 @@ export function GetKeyData(id) {
     useEffect(() => {
         if (useMockedData) {
             fetch(`${urlMocked}user${userID}.json`)
-                .then((res) => {
-                    if (res.status === 404) {
-                        window.location.href = "/error";
-                        return;
-                    } else {
-                        return res.json();
-                    }
-                })
+                .then((res) => res.json())
                 .then((result) => setKeyData(result.data.keyData));
         } else {
             fetch(`${url}${userID}`)
@@ -95,14 +81,7 @@ export function GetActivityData(id) {
     useEffect(() => {
         if (useMockedData) {
             fetch(`${urlMocked}${userID}/activity.json`)
-                .then((res) => {
-                    if (res.status === 404) {
-                        window.location.href = "/error";
-                        return;
-                    } else {
-                        return res.json();
-                    }
-                })
+                .then((res) => res.json())
                 .then((result) => setActivityData(result.data.sessions));
         } else {
             fetch(`${url}${userID}/activity`)
@@ -133,14 +112,7 @@ export function GetSessionData(id) {
     useEffect(() => {
         if (useMockedData) {
             fetch(`${urlMocked}/${userID}/average-sessions.json`)
-                .then((res) => {
-                    if (res.status === 404) {
-                        window.location.href = "/error";
-                        return;
-                    } else {
-                        return res.json();
-                    }
-                })
+                .then((res) => res.json())
                 .then((result) => setSessionData(result.data.sessions));
         } else {
             fetch(`${url}${userID}/average-sessions`)
@@ -171,14 +143,7 @@ export function GetUserScore(id) {
     useEffect(() => {
         if (useMockedData) {
             fetch(`${urlMocked}user${userID}.json`)
-                .then((res) => {
-                    if (res.status === 404) {
-                        window.location.href = "/error";
-                        return;
-                    } else {
-                        return res.json();
-                    }
-                })
+                .then((res) => res.json())
                 .then((result) => setUserScore(result.data.todayScore));
         } else {
             fetch(`${url}${userID}`)
@@ -209,14 +174,7 @@ export function GetUserPerformance(id) {
     useEffect(() => {
         if (useMockedData) {
             fetch(`${urlMocked}${userID}/performance.json`)
-                .then((res) => {
-                    if (res.status === 404) {
-                        window.location.href = "/error";
-                        return;
-                    } else {
-                        return res.json();
-                    }
-                })
+                .then((res) => res.json())  
                 .then((result) => setUserPerformance(result.data));
         } else {
             fetch(`${url}${userID}/performance`)
